@@ -1,5 +1,18 @@
 usuarios={}
-usuarios={
-    "Chaves":["Chaves Silva","17/06/2017","Recep_01"],
-    "Quico":["Enrico Flores","03/06/2017","Raiox_02"]
-    }
+opcao=input("O que deseja realizar?" +
+            "<I> - Para Inserir um usuário"+
+            "<P> - Para Pesquisar um usuário"+
+            "<E> - Para Excluir um usuário"+
+            "<L> - Para Listar um usuário: ").upper()
+while opcao=="I" or opcao=="P" or opcao=="E" or opcao=="L":
+    if opcao=="I":
+        chave=input("Digite o login: ").upper()
+        nome=input("Digite o nome: ").upper()
+        data=input("Digite a última data de acesso: ")
+        estacao=input("Qual a última estação acessada: ").upper()
+        usuarios[chave]=[nome, data, estacao]
+    opcao = input("O que deseja realizar?" +
+                  "<I> - Para Inserir um usuário" +
+                  "<P> - Para Pesquisar um usuário" +
+                  "<E> - Para Excluir um usuário" +
+                  "<L> - Para Listar um usuário: ").upper()
